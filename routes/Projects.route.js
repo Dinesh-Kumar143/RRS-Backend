@@ -2,7 +2,7 @@ import express from "express"
 import { Project } from "../model/Project.model.js"
 import cors from "cors"
 const router = express.Router();
-router.use(cors({origin: "http://localhost:5173"}))
+router.use(cors({ origin: "https://iad-rrs-website.vercel.app/" }))
 
 router.post("/", async (req, res) => {
     try {
@@ -68,7 +68,7 @@ router.delete("/:id", async (req, res) => {
             return res.status(404).json({ message: "Project Not found" });
         }
 
-        res.status(200).json({message: "Project Deleted Successfully."});
+        res.status(200).json({ message: "Project Deleted Successfully." });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -81,7 +81,7 @@ router.delete("/", async (req, res) => {
             return res.status(404).json({ message: "Project Not found" });
         }
 
-        res.status(200).json({message: "Projects Deleted Successfully."});
+        res.status(200).json({ message: "Projects Deleted Successfully." });
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
