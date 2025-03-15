@@ -2,7 +2,7 @@ import express from "express"
 import { Project } from "../model/Project.model.js"
 import cors from "cors"
 const router = express.Router();
-router.use(cors({ origin: "https://iad-rrs-website.vercel.app/" }))
+router.use(cors({ origin: "https://iad-rrs-website.vercel.app" }))
 
 router.post("/", async (req, res) => {
     try {

@@ -14,7 +14,7 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/api/Project", Project);
-app.use(cors({ origin: "https://iad-rrs-website.vercel.app/" }));
+app.use(cors({ origin: "https://iad-rrs-website.vercel.app" }));
 
 //Database Connection
 const db = mongoose.connect(process.env.Mongo_URI)
